@@ -1,0 +1,57 @@
+import React from "react"; import { Card, CardContent } from "@/components/ui/card"; import { Button } from "@/components/ui/button"; import { Mail, Linkedin, Github } from "lucide-react"; import { motion } from "framer-motion";
+
+export default function AboutMe() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-200 p-6 flex items-center justify-center"> <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-4xl w-full" > <Card className="rounded-2xl shadow-xl border-0"> <CardContent className="p-10 grid md:grid-cols-2 gap-8 items-center"> {/* Left Section */} <div className="space-y-6"> <div> <h1 className="text-4xl font-bold text-slate-800">Hello, I'm Belike 👋</h1> <p className="text-lg text-slate-600 mt-3"> A dedicated and straightforward professional passionate about continuous learning, self-development, and creating meaningful impact. </p> </div>
+
+<div>
+            <h2 className="text-xl font-semibold text-slate-700 mb-2">About Me</h2>
+            <p className="text-slate-600 leading-relaxed">
+              Experienced in working with technology and problem-solving, I focus on delivering quality results while maintaining a balanced and adaptable mindset. I enjoy collaborating with teams and taking ownership of responsibilities that challenge and help me grow professionally.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold text-slate-700 mb-2">Skills</h2>
+            <ul className="grid grid-cols-2 gap-2 text-slate-600">
+              <li>• ServiceNow</li>
+              <li>• Linux & Shell Scripting</li>
+              <li>• Power BI</li>
+              <li>• Problem Solving</li>
+              <li>• Team Collaboration</li>
+              <li>• Continuous Learning</li>
+            </ul>
+          </div>
+
+          <div className="flex gap-4 pt-4">
+            <Button className="rounded-2xl flex gap-2">
+              <Mail size={16} /> Contact
+            </Button>
+            <Button variant="outline" className="rounded-2xl flex gap-2">
+              <Linkedin size={16} /> LinkedIn
+            </Button>
+            <Button variant="outline" className="rounded-2xl flex gap-2">
+              <Github size={16} /> GitHub
+            </Button>
+          </div>
+        </div>
+
+        {/* Right Section */}
+        <div className="flex justify-center">
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="w-64 h-64 rounded-2xl bg-slate-300 shadow-lg flex items-center justify-center text-slate-600 text-lg"
+          >
+            Your Photo
+          </motion.div>
+        </div>
+      </CardContent>
+    </Card>
+
+    <div className="text-center text-sm text-slate-500 mt-6">
+      © {new Date().getFullYear()} Belike. All rights reserved.
+    </div>
+  </motion.div>
+</div>
+
+); }
